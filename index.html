@@ -276,8 +276,7 @@ main { max-width: 1040px; margin: 0 auto; padding: 16px 16px 72px; }
   text-indent: -0.5in;
   overflow-wrap: anywhere;  /* long URLs wrap on phones */
 }
-
-/* ---------- Additional links ---------- */
+    /* ---------- Additional links ---------- */
 .link-group + .link-group { margin-top: 12px; }
 .link-group h3 { margin: 0 0 14px; font-family: var(--serif); font-size: 20px; color: var(--navy); }
 .link-grid {
@@ -299,4 +298,302 @@ main { max-width: 1040px; margin: 0 auto; padding: 16px 16px 72px; }
 .link-card:hover { border-color: var(--navy-2); transform: translateY(-2px); }
 .link-card .src { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
 .link-card .t { display: block; margin: 4px 0 6px; font-family: var(--serif); font-size: 18px; font-weight: 700; line-height: 1.3; color: var(--navy); }
-.link-card .d { display: block; font-size: 14.5px; line-height: 1.5
+.link-card .d { display: block; font-size: 14.5px; line-height: 1.5; color: var(--muted); }
+.link-card .u { display: block; margin-top: 10px; font-size: 13px; color: #7b8394; }
+.link-card .u::after { content: " ↗"; }
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--navy);
+  color: #b7c2da;
+  text-align: center;
+  padding: 32px 16px;
+  font-size: 15px;
+  border-top: 3px solid var(--red);
+}
+footer p { margin: 4px 0; }
+footer strong { color: #fff; }
+footer .small { font-size: 13.5px; }
+
+/* ---------- Smaller screens ---------- */
+@media (max-width: 860px) {
+  .overview { grid-template-columns: repeat(2, 1fr); }
+  .paper { padding: 48px 40px; }
+}
+
+@media (max-width: 640px) {
+  html { scroll-padding-top: 0; }
+  .topnav { position: static; }
+  .topnav-inner { flex-direction: column; align-items: stretch; gap: 0; padding: 10px 16px 8px; }
+  .topnav nav { margin: 4px -12px 0; flex-wrap: wrap; }
+  .hero { padding: 44px 16px 100px; }
+  .lede { font-size: 17px; }
+  .paper { padding: 32px 20px; font-size: 16px; }
+  .letter .indent { text-indent: 2em; }
+  .works-cited p { padding-left: 2em; text-indent: -2em; }
+  .evidence { padding: 20px 16px; }
+  .evidence dl { grid-template-columns: 1fr; gap: 0; }
+  .evidence dd { margin-bottom: 10px; }
+}
+
+@media (max-width: 480px) {
+  .overview { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* ---------- Printing ---------- */
+@media print {
+  .topnav, .overview, .btn-row, .helper, footer { display: none; }
+  body { background: #fff; }
+  .hero { background: none; color: #000; padding: 0 0 16px; }
+  .hero .lede, .byline { color: #000; }
+  .paper { box-shadow: none; border: 0; padding: 0; max-width: none; }
+  .section { break-before: page; padding-top: 0; }
+}
+</style>
+  <!--
+    This page has no outside scripts, fonts, or embeds on purpose,
+    so school filters (like GoGuardian) have nothing extra to block.
+
+    HOW TO EDIT: look for the comments that say "EDIT".
+    Anything with a yellow highlight on the page is a placeholder to replace.
+    To remove the yellow highlight, delete the <span class="fill"> ... </span> tags around your text.
+  -->
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="brand" href="#top">🏛️ Dreamers Future Act</a>
+      <nav aria-label="Sections">
+        <a href="#letter">Letter</a>
+        <a href="#bill">Bill</a>
+        <a href="#bibliography">Bibliography</a>
+        <a href="#links">More Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <p class="stars" aria-hidden="true">★ ★ ★</p>
+    <p class="eyebrow">U.S. Government · Mock Congress Project</p>
+    <h1>Dreamers Future Act</h1>
+    <p class="lede">A student bill proposal to give young Dreamers, people brought to the United States as children, a pathway to establish their lives and futures here.</p>
+    <!-- EDIT: your name(s) and class -->
+    <p class="byline">
+      By <span class="fill">Your Name</span> &amp; <span class="fill">Partner's Name (or delete)</span>
+      · <span class="fill">Class, Period #</span>
+    </p>
+  </section>
+
+  <div class="overview">
+    <a class="ov-card" href="#letter">
+      <span class="num">01</span>
+      <span class="ov-title">Letter to a Representative</span>
+      <span class="ov-text">½-page letter, double-spaced, with proof it was sent.</span>
+    </a>
+    <a class="ov-card" href="#bill">
+      <span class="num">02</span>
+      <span class="ov-title">The Bill</span>
+      <span class="ov-text">The full text of the Dreamers Future Act.</span>
+    </a>
+    <a class="ov-card" href="#bibliography">
+      <span class="num">03</span>
+      <span class="ov-title">Bibliography</span>
+      <span class="ov-text">Works Cited in MLA format.</span>
+    </a>
+    <a class="ov-card" href="#links">
+      <span class="num">04</span>
+      <span class="ov-title">Additional Links</span>
+      <span class="ov-text">More on Dreamers, DACA, and the Dream Act.</span>
+    </a>
+  </div>
+
+  <main>
+
+    <!-- ===================== 1. LETTER ===================== -->
+    <section class="section" id="letter">
+      <div class="section-head">
+        <span class="section-num">1</span>
+        <div>
+          <h2>Letter to a Representative</h2>
+          <p>Background on the issue and why this legislation is needed.</p>
+        </div>
+      </div>
+
+      <!-- EDIT: paste your letter below. The whole sheet is already double-spaced.
+           Each <p class="indent"> is one indented paragraph. Copy that line to add more paragraphs. -->
+      <article class="paper double letter">
+        <p><span class="fill">Date</span></p>
+
+        <p class="mt">Dear <span class="fill">Representative / Senator Last Name</span>,</p>
+
+        <p class="indent"><span class="fill">Paste your ½-page letter here. Give background on the issue facing Dreamers and explain why the Dreamers Future Act is necessary.</span></p>
+
+        <p class="mt">Sincerely,</p>
+        <p><span class="fill">Your Name</span></p>
+        <p><span class="fill">City, State</span></p>
+      </article>
+
+      <div class="evidence">
+        <h3>Proof of Submission</h3>
+        <!-- EDIT: fill in who you sent it to and when -->
+        <dl>
+          <dt>Sent to</dt>
+          <dd><span class="fill">Representative's full name</span></dd>
+          <dt>Office</dt>
+          <dd><span class="fill">U.S. House or Senate, State, District #</span></dd>
+          <dt>Date sent</dt>
+          <dd><span class="fill">Date</span></dd>
+          <dt>Sent through</dt>
+          <dd><span class="fill">Their website contact form / email</span></dd>
+        </dl>
+
+        <!-- EDIT: to add your screenshot:
+             1. Upload the screenshot to the same place as this index.html and name it submission.png
+             2. Replace the whole <div class="shot-placeholder"> ... </div> below with:
+                <img class="shot" src="submission.png" alt="Screenshot confirming my letter was submitted">
+        -->
+        <div class="shot-placeholder">
+          <span class="shot-icon" aria-hidden="true">📷</span>
+          Screenshot of the submission confirmation goes here
+        </div>
+
+        <p class="helper">Not sure who represents you? Use the official lookups:</p>
+        <div class="btn-row">
+          <a class="btn" href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">Find your House Representative</a>
+          <a class="btn secondary" href="https://www.senate.gov/senators/senators-contact.htm" target="_blank" rel="noopener">Find your Senators</a>
+        </div>
+      </div>
+    </section>
+
+
+     <!-- ===================== 2. BILL ===================== -->
+    <section class="section" id="bill">
+      <div class="section-head">
+        <span class="section-num">2</span>
+        <div>
+          <h2>The Bill</h2>
+          <p>The full text of the Dreamers Future Act.</p>
+        </div>
+      </div>
+
+      <article class="paper bill">
+        <p class="bill-kicker">A Bill</p>
+        <h3 class="bill-title">Dreamers Future Act</h3>
+        <p class="bill-sponsor">Introduced by <span class="fill">Your Name</span></p>
+        <hr class="bill-rule" />
+
+        <div class="blank">Bill text coming soon.</div>
+
+        <!-- EDIT: when your bill is ready, delete the <div class="blank"> line above
+             and remove the comment marks around this template. It follows the
+             assignment format: purpose statement, then numbered sections with a bold title.
+
+        <p class="bill-purpose">Purpose statement goes here.</p>
+        <ol class="bill-sections">
+          <li><strong>Section Title:</strong> Section text.</li>
+          <li><strong>Section Title:</strong> Section text.</li>
+          <li><strong>Section Title:</strong> Section text.</li>
+          <li><strong>Section Title:</strong> Section text.</li>
+          <li><strong>Section Title:</strong> Section text.</li>
+          <li><strong>Section Title:</strong> Section text.</li>
+        </ol>
+        -->
+      </article>
+    </section>
+
+    <!-- ===================== 3. BIBLIOGRAPHY ===================== -->
+    <section class="section" id="bibliography">
+      <div class="section-head">
+        <span class="section-num">3</span>
+        <div>
+          <h2>Bibliography</h2>
+          <p>Sources in MLA format (alphabetical, double-spaced, hanging indent).</p>
+        </div>
+      </div>
+
+      <!-- EDIT: keep entries in alphabetical order. Swap in any sources you actually used.
+           Update the "Accessed" dates to the day you looked at each source. -->
+      <article class="paper works-cited">
+        <h3>Works Cited</h3>
+        <p>“Consideration of Deferred Action for Childhood Arrivals (DACA).” <i>U.S. Citizenship and Immigration Services</i>, www.uscis.gov/DACA. Accessed 29 Oct. 2026.</p>
+        <p>“The Dream Act: An Overview.” <i>American Immigration Council</i>, 27 Aug. 2026, www.americanimmigrationcouncil.org/fact-sheet/dream-act-overview/. Accessed 29 Oct. 2026.</p>
+        <p>“Durbin, Graham Introduce the Dream Act.” Office of U.S. Senator Dick Durbin, 10 Feb. 2023, www.durbin.senate.gov/newsroom/press-releases/durbin-graham-introduce-the-dream-act. Accessed 29 Oct. 2026.</p>
+        <p>United States, Congress, Senate. Dream Act of 2023. <i>Congress.gov</i>, www.congress.gov/bill/118th-congress/senate-bill/365. 118th Congress, 1st session, Senate Bill 365.</p>
+      </article>
+    </section>
+
+    <!-- ===================== 4. ADDITIONAL LINKS ===================== -->
+    <section class="section" id="links">
+      <div class="section-head">
+        <span class="section-num">4</span>
+        <div>
+          <h2>Additional Links</h2>
+          <p>More information related to this bill.</p>
+        </div>
+      </div>
+
+      <div class="link-group">
+        <h3>Learn about the issue</h3>
+        <div class="link-grid">
+          <a class="link-card" href="https://www.congress.gov/bill/118th-congress/senate-bill/365" target="_blank" rel="noopener">
+            <span class="src">Congress.gov</span>
+            <span class="t">Dream Act of 2023 (S. 365)</span>
+            <span class="d">Text and status of the bipartisan Dream Act introduced in the Senate in 2023.</span>
+            <span class="u">congress.gov</span>
+          </a>
+          <a class="link-card" href="https://www.americanimmigrationcouncil.org/fact-sheet/dream-act-overview/" target="_blank" rel="noopener">
+            <span class="src">American Immigration Council</span>
+            <span class="t">The Dream Act: An Overview</span>
+            <span class="d">Fact sheet explaining the Dream Act and who would qualify.</span>
+            <span class="u">americanimmigrationcouncil.org</span>
+          </a>
+          <a class="link-card" href="https://www.uscis.gov/DACA" target="_blank" rel="noopener">
+            <span class="src">USCIS</span>
+            <span class="t">Deferred Action for Childhood Arrivals (DACA)</span>
+            <span class="d">Official government information on the DACA program.</span>
+            <span class="u">uscis.gov</span>
+          </a>
+          <a class="link-card" href="https://immigrationforum.org/article/bill-summary-dream-act-of-2023/" target="_blank" rel="noopener">
+            <span class="src">National Immigration Forum</span>
+            <span class="t">Bill Summary: Dream Act of 2023</span>
+            <span class="d">Plain-language breakdown of what the 2023 Dream Act would do.</span>
+            <span class="u">immigrationforum.org</span>
+          </a>
+          <a class="link-card" href="https://www.durbin.senate.gov/newsroom/press-releases/durbin-graham-introduce-the-dream-act" target="_blank" rel="noopener">
+            <span class="src">U.S. Senate</span>
+            <span class="t">Durbin, Graham Introduce the Dream Act</span>
+            <span class="d">Press release from the senators who sponsored the 2023 Dream Act.</span>
+            <span class="u">durbin.senate.gov</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="link-group">
+        <h3>Contact Congress</h3>
+        <div class="link-grid">
+          <a class="link-card" href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">
+            <span class="src">House.gov</span>
+            <span class="t">Find Your Representative</span>
+            <span class="d">Enter a ZIP code to find your member of the House and their contact page.</span>
+            <span class="u">house.gov</span>
+          </a>
+          <a class="link-card" href="https://www.senate.gov/senators/senators-contact.htm" target="_blank" rel="noopener">
+            <span class="src">Senate.gov</span>
+            <span class="t">Contact Your Senators</span>
+            <span class="d">Contact information for every U.S. senator, sorted by state.</span>
+            <span class="u">senate.gov</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Dreamers Future Act</strong> · A student project for <span class="fill">Class Name</span></p>
+    <p class="small">This is a mock bill written for a classroom Congress simulation, not real legislation.</p>
+  </footer>
+
+</body>
+</html>
